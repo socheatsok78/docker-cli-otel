@@ -1,0 +1,17 @@
+name: docker-cli-otel
+
+services:
+  otel-lgtm:
+    image: grafana/otel-lgtm:latest
+    container_name: otel-lgtm
+    ports:
+      - "3000:3000"
+      - "4317:4317"
+      - "4318:4318"
+    volumes:
+      - otel_lgtm_data:/data
+volumes:
+  otel_lgtm_data:
+networks:
+  default:
+    driver: bridge
