@@ -39,4 +39,4 @@ See https://docs.docker.com/build/debug/opentelemetry/ for more information abou
 ## Troubleshooting
 
 > [!NOTE]
-> I find that setting the environment variable `OTEL_EXPORTER_OTLP_ENDPOINT` to `http://0.0.0.0:4318` works best for my environment running macOS. You can set it `127.0.0.1` or `localhost` as well, following the official documentation.
+> I find that setting the environment variable `OTEL_EXPORTER_OTLP_ENDPOINT` to `http://0.0.0.0:4317` works best for my environment running **macOS**. You can set it `http://127.0.0.1:4317` as well as seen in the official documentation.
