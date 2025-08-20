@@ -16,7 +16,7 @@ The Docker CLI supports OpenTelemetry instrumentation for emitting metrics about
 The Docker CLI doesn't emit telemetry data by default. Only if you've set an environment variable on your system will Docker CLI attempt to emit OpenTelemetry metrics, to the endpoint that you specify.
 
 ```sh
-export DOCKER_CLI_OTEL_EXPORTER_OTLP_ENDPOINT=<endpoint>
+export DOCKER_CLI_OTEL_EXPORTER_OTLP_ENDPOINT=http://0.0.0.0:4318
 ```
 
 See https://docs.docker.com/engine/cli/otel/ for more information about the OpenTelemetry support in Docker CLI.
@@ -35,3 +35,8 @@ export OTEL_EXPORTER_OTLP_ENDPOINT=http://0.0.0.0:4318
 ```
 
 See https://docs.docker.com/build/debug/opentelemetry/ for more information about the OpenTelemetry support in BuildKit.
+
+## Troubleshooting
+
+> [!NOTE]
+> I find that setting the environment variable `OTEL_EXPORTER_OTLP_ENDPOINT` to `http://0.0.0.0:4318` works best for my environment running macOS. You can set it `127.0.0.1` or `localhost` as well, following the official documentation.
