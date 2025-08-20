@@ -16,7 +16,7 @@ The Docker CLI supports OpenTelemetry instrumentation for emitting metrics about
 The Docker CLI doesn't emit telemetry data by default. Only if you've set an environment variable on your system will Docker CLI attempt to emit OpenTelemetry metrics, to the endpoint that you specify.
 
 ```sh
-export DOCKER_CLI_OTEL_EXPORTER_OTLP_ENDPOINT=http://0.0.0.0:4318
+export DOCKER_CLI_OTEL_EXPORTER_OTLP_ENDPOINT=http://0.0.0.0:4317
 ```
 
 See https://docs.docker.com/engine/cli/otel/ for more information about the OpenTelemetry support in Docker CLI.
@@ -29,7 +29,7 @@ API and buildctl commands. To capture the trace to
 environment variable to the collection address.
 
 ```sh
-export OTEL_EXPORTER_OTLP_ENDPOINT=http://0.0.0.0:4318
+export OTEL_EXPORTER_OTLP_ENDPOINT=http://0.0.0.0:4317
 # restart buildkitd and buildctl so they know OTEL_EXPORTER_OTLP_ENDPOINT
 # any buildctl command should be traced to http://127.0.0.1:3000/
 ```
